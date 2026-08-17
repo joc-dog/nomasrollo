@@ -149,6 +149,10 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .logo-link {
@@ -178,7 +182,7 @@ body {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.5rem;
 }
 
 .nav-link {
@@ -186,7 +190,7 @@ body {
   text-decoration: none;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: color var(--transition-fast);
