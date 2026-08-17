@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+
+# Reglas de redirección para soportar navegación Single Page Application (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
