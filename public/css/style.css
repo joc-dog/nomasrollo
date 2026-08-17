@@ -237,6 +237,7 @@ body {
 /* --- Hero Section --- */
 .hero-section {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   position: relative;
@@ -1015,5 +1016,14 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  /* Pull up indicator and hide mouse icon on mobile to avoid overlap/cut-off */
+  .scroll-down-indicator {
+    bottom: 1.2rem;
+  }
+
+  .mouse-icon {
+    display: none;
   }
 }
