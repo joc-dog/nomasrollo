@@ -1018,12 +1018,8 @@ body {
     text-align: center;
   }
 
-  /* Pull up indicator and hide mouse icon on mobile to avoid overlap/cut-off */
+  /* Pull up indicator on mobile to avoid overlap/cut-off and keep the animated mouse icon */
   .scroll-down-indicator {
-    bottom: 1.2rem;
-  }
-
-  .mouse-icon {
-    display: none;
+    bottom: 1.6rem;
   }
 }
