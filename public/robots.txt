@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nomasrollo.es/sitemap.xml
+Sitemap: https://www.nomasrollo.es/sitemap.xml
