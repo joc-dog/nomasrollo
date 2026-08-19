@@ -411,18 +411,18 @@
       </div>
 
       <div class="contact-form-panel">
-        <form class="contact-form" id="lead-form">
+        <form class="contact-form" id="lead-form" name="contacto" data-netlify="true">
           <div class="form-group">
             <label for="form-name">Tu Nombre</label>
-            <input type="text" id="form-name" placeholder="Ej. Carlos Mendoza" required>
+            <input type="text" id="form-name" name="nombre" placeholder="Ej. Carlos Mendoza" required>
           </div>
           <div class="form-group">
             <label for="form-email">Tu Email</label>
-            <input type="email" id="form-email" placeholder="Ej. carlos@tuempresa.com" required>
+            <input type="email" id="form-email" name="email" placeholder="Ej. carlos@tuempresa.com" required>
           </div>
           <div class="form-group">
             <label for="form-service">Servicio Interés</label>
-            <select id="form-service" required>
+            <select id="form-service" name="servicio" required>
               <option value="" disabled selected>Selecciona una opción...</option>
               <option value="estrategia">Estrategia Digital</option>
               <option value="publicidad">Publicidad Online</option>
@@ -435,7 +435,7 @@
           </div>
           <div class="form-group">
             <label for="form-message">Cuéntanos tu proyecto (sin rodeos)</label>
-            <textarea id="form-message" rows="4" placeholder="Ej. Quiero rediseñar mi web de servicios y lanzar anuncios en Google..." required></textarea>
+            <textarea id="form-message" name="mensaje" rows="4" placeholder="Ej. Quiero rediseñar mi web de servicios y lanzar anuncios en Google..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
           <div class="form-response-msg" id="form-msg"></div>

@@ -136,19 +136,37 @@ document.addEventListener('DOMContentLoaded', () => {
       formMsg.className = 'form-response-msg';
       formMsg.textContent = '';
 
-      // Simulate a real POST request to backend server API
-      // Since this is served by Express, we could implement a POST handler in the future.
-      setTimeout(() => {
-        // Simple success simulation
+      // Real AJAX POST request to Netlify Forms
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contacto',
+          'nombre': name,
+          'email': email,
+          'servicio': service,
+          'mensaje': message
+        }).toString()
+      })
+      .then(response => {
         submitBtn.textContent = originalBtnText;
         submitBtn.disabled = false;
         
-        formMsg.classList.add('success');
-        formMsg.textContent = `¡Gracias, ${name}! Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas laborables sin rodeos.`;
-
-        // Clear the form fields
-        leadForm.reset();
-      }, 1500);
+        if (response.ok) {
+          formMsg.classList.add('success');
+          formMsg.textContent = `¡Gracias, ${name}! Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas laborables sin rodeos.`;
+          leadForm.reset();
+        } else {
+          formMsg.classList.add('error');
+          formMsg.textContent = 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por teléfono.';
+        }
+      })
+      .catch(error => {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+        formMsg.classList.add('error');
+        formMsg.textContent = 'Hubo un problema de conexión. Por favor, revisa tu conexión a internet o contáctanos por teléfono.';
+      });
     });
   }
 });
