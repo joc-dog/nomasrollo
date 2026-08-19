@@ -20,3 +20,6 @@ yarn-error.log*
 walkthrough.md
 implementation_plan.md
 task.md
+
+# Archivos de build (SSG)
+public/marketing-digital/

@@ -843,10 +843,12 @@ body {
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   transition: all var(--transition-fast);
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.location-tag:hover {
+.location-tag:hover,
+.location-tag.active {
   color: var(--accent-color);
   border-color: var(--accent-color);
   background-color: rgba(245, 197, 24, 0.05);

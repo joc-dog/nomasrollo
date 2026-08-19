@@ -1,4 +1,5 @@
 [build]
+  command = "node src/build-pages.js"
   publish = "public"
 
 # Reglas de redirección para soportar navegación Single Page Application (SPA)
