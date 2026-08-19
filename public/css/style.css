@@ -806,6 +806,52 @@ body {
   letter-spacing: 1px;
 }
 
+.footer-locations {
+  width: 100%;
+  max-width: var(--max-width);
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.locations-title {
+  color: var(--accent-color);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.locations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 0.8rem;
+  max-width: 900px;
+}
+
+.location-tag {
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  transition: all var(--transition-fast);
+  cursor: default;
+}
+
+.location-tag:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-color: rgba(245, 197, 24, 0.05);
+}
+
 .footer-meta {
   width: 100%;
   max-width: var(--max-width);
