@@ -94,15 +94,22 @@ async function main() {
     }
     let templateHtml = fs.readFileSync(templateFilePath, 'utf8');
 
-    // Tomamos las últimas 3 noticias para la home
-    const latestPosts = articles.slice(-3).reverse();
+    // Tomamos las últimas 4 noticias para la home
+    const latestPosts = articles.slice(-4).reverse();
     const latestCardsHtml = latestPosts.map(generateBlogCardHtml).join('\n');
     
-    // Inyectamos preservando el tag de reemplazo para futuras compilaciones
+    // Inyectamos usando comentarios de inicio y fin para permitir regeneraciones limpias
+    const startTag = '<!-- INJECT_LATEST_POSTS_START -->';
+    const endTag = '<!-- INJECT_LATEST_POSTS_END -->';
+    const regex = new RegExp(`${startTag}[\\s\\S]*?${endTag}`);
     templateHtml = templateHtml.replace(
-      '<!-- INJECT_LATEST_POSTS -->',
-      `<!-- INJECT_LATEST_POSTS -->\n${latestCardsHtml}`
+      regex,
+      `${startTag}\n${latestCardsHtml}\n${endTag}`
     );
+
+    // Guardamos la plantilla compilada con los posts de vuelta a public/index.html
+    fs.writeFileSync(templateFilePath, templateHtml);
+    console.log('Inyectadas las últimas 4 noticias en la página principal index.html.');
 
     // ==========================================================================
     // 3. GENERAR PÁGINAS INDIVIDUALES DEL BLOG
