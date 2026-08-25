@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "dominio-hosting-servidor-diferencias",
+    "title": "Dominio, hosting y servidor: las diferencias que conviene conocer",
+    "description": "Comprender qué hace cada uno ayuda a entender cómo funciona una página web y a tomar mejores decisiones al crear un proyecto digital.",
+    "date": "10 jul 2026",
+    "category": "Desarrollo",
+    "image": "/assets/blog/dominio-hosting.jpg",
+    "content": "<h3>El punto de partida de tu proyecto</h3><p>Para lanzar un proyecto digital necesitas tres elementos básicos: el dominio (el nombre de tu web), el hosting (el servidor donde se guardan tus archivos) y el servidor DNS (el traductor que los conecta).</p><h3>¿Qué es el dominio?</h3><p>El dominio es la dirección de tu casa digital. Por ejemplo, <strong>nomasrollo.es</strong>. Es el nombre único y exclusivo que los usuarios escriben en el navegador para encontrarte.</p><h3>¿Qué es el hosting?</h3><p>El hosting o alojamiento web es el terreno físico donde construyes tu casa. Es un espacio en un servidor conectado a internet las 24 horas del día donde se almacenan las imágenes, el código y el contenido de tu página web.</p><h3>¿Qué es el servidor?</h3><p>El servidor es la computadora física real que aloja el hosting. Tiene una potencia muy elevada y está optimizada para servir las solicitudes de los usuarios en milisegundos.</p>"
+  },
+  {
+    "slug": "metricas-marketing-digital-empresas",
+    "title": "¿Qué métricas de marketing debería conocer cualquier empresa?",
+    "description": "Medir los datos adecuados permite entender cómo se comportan los usuarios y tomar decisiones más acertadas para hacer crecer un negocio.",
+    "date": "10 jul 2026",
+    "category": "Analítica",
+    "image": "/assets/blog/metricas.jpg",
+    "content": "<h3>El valor de los datos reales</h3><p>En el marketing digital, lo que no se mide no se puede mejorar. Analizar las métricas correctas es la diferencia entre ir a ciegas o tomar decisiones rentables basándote en el comportamiento de tus clientes.</p><h3>1. Costo de Adquisición de Cliente (CAC)</h3><p>El CAC te dice exactamente cuánto dinero te cuesta conseguir un nuevo cliente. Se calcula dividiendo la inversión total en marketing y ventas entre el número de clientes captados.</p><h3>2. Retorno de la Inversión Publicitaria (ROAS)</h3><p>El ROAS mide el beneficio generado por cada euro invertido en campañas de anuncios. Si gastas 100€ en Google Ads y facturas 500€, tu ROAS es de 5:1 (un 500%).</p><h3>3. Tasa de Conversión</h3><p>Es el porcentaje de usuarios que completan una acción deseada en tu web (como rellenar el formulario de contacto o realizar una compra). Una tasa de conversión óptima suele rondar entre el 1% y el 3%.</p>"
+  },
+  {
+    "slug": "paradoja-de-la-eleccion-conversiones",
+    "title": "La paradoja de la elección: cuando ofrecer demasiado hace perder clientes",
+    "description": "Más opciones no siempre significan más ventas. En muchos casos, un exceso de alternativas genera dudas, ralentiza la decisión y hace que los clientes abandonen.",
+    "date": "10 jul 2026",
+    "category": "CRO",
+    "image": "/assets/blog/paradoja-eleccion.jpg",
+    "content": "<h3>Menos es más en el diseño web</h3><p>El psicólogo Barry Schwartz describió cómo el exceso de opciones paraliza al consumidor en lugar de liberarlo. En el diseño de páginas web y landing pages, este principio (conocido como CRO o conversión) es fundamental para evitar fugas de clientes.</p><h3>¿Por qué demasiadas opciones reducen tus ventas?</h3><p>Cuando un visitante entra a tu web y ve 15 servicios diferentes, 3 CTAs principales y 5 formas de contacto, su cerebro se fatiga. Ante la duda de no saber cuál elegir, el usuario prefiere cerrar la pestaña y marcharse.</p><h3>Cómo simplificar tu estructura para vender más</h3><p>1. <strong>Un solo objetivo principal por página</strong>: Cada landing page debe tener un CTA claro (ej. \"Llamar ahora\" o \"Pedir presupuesto\").<br>2. <strong>Estructura clara de servicios</strong>: Agrupa tus servicios en categorías lógicas y presenta la información de forma progresiva.<br>3. <strong>Formularios cortos</strong>: Pide solo los datos estrictamente necesarios (Nombre, Email y Teléfono) para evitar fricciones de salida.</p>"
+  }
+]
