@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{DESCRIPTION}}">
+  <title>{{TITLE}} | Blog No Más Rollo</title>
+  
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.nomasrollo.es/blog/{{SLUG}}">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.nomasrollo.es/blog/{{SLUG}}">
+  <meta property="og:title" content="{{TITLE}} | Blog No Más Rollo">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://www.nomasrollo.es{{IMAGE}}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+<body class="blog-body-page">
+
+  <!-- Navigation Header -->
+  <header class="main-header reduced" id="header" style="position: sticky; background: rgba(11, 11, 11, 0.95); backdrop-filter: blur(10px);">
+    <div class="header-container">
+      <a href="/" class="logo-link">
+        <img src="/assets/logo.png" alt="No Más Rollo Logo" class="nav-logo">
+      </a>
+      
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-nav-toggle" aria-label="Abrir menú" aria-expanded="false" id="menu-toggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/#estrategia" class="nav-link">Estrategia Digital</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#publicidad" class="nav-link">Publicidad Online</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#paginas-web" class="nav-link">Páginas Web</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#seo" class="nav-link">SEO y Posicionamiento</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#redes-sociales" class="nav-link">Redes Sociales</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#analisis" class="nav-link">Análisis y Optimización</a>
+          </li>
+          <li class="nav-item">
+            <a href="tel:+34661719121" class="btn btn-primary btn-nav">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -1px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Hablemos Claro
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Article View Area -->
+  <main class="article-main-container">
+    <div class="container article-content-wrapper">
+      <!-- Back button link -->
+      <div class="back-link-wrapper">
+        <a href="/blog" class="back-blog-link">← Volver al blog</a>
+      </div>
+
+      <!-- Article Header details -->
+      <header class="article-meta-header">
+        <span class="article-tag-badge">{{CATEGORY}}</span>
+        <h1 class="article-main-title">{{TITLE}}</h1>
+        <p class="article-date-pub">Publicado el {{DATE}}</p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="article-featured-image-wrapper">
+        <img src="{{IMAGE}}" alt="{{TITLE}}" class="article-hero-image">
+      </div>
+
+      <!-- Main HTML Text content -->
+      <article class="article-text-body">
+        {{CONTENT}}
+      </article>
+
+      <!-- Article Footer share / call CTA -->
+      <footer class="article-call-cta-box">
+        <h4>¿Tu negocio necesita resultados claros y sin rodeos?</h4>
+        <p>No más teorías ni presupuestos desperdiciados. Diseñamos la estrategia digital y las campañas a la medida de tu empresa.</p>
+        <div class="cta-actions-row">
+          <a href="tel:+34661719121" class="btn btn-primary">Llamar Directamente</a>
+          <a href="/#contacto" class="btn btn-outline">Hablemos Claro</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="No Más Rollo Logo Footer" class="footer-logo">
+        <p class="footer-slogan">Tu negocio es lo tuyo. Lo digital, lo nuestro.</p>
+      </div>
+      
+      <!-- Service Areas / Zonas de Servicio (Local SEO) -->
+      <div class="footer-locations">
+        <h4 class="locations-title">Agencia de Marketing Digital en:</h4>
+        <div class="locations-grid">
+          <a href="/marketing-digital/orihuela" class="location-tag">Orihuela</a>
+          <a href="/marketing-digital/almoradi" class="location-tag">Almoradí</a>
+          <a href="/marketing-digital/arneva" class="location-tag">Arneva</a>
+          <a href="/marketing-digital/benejuzar" class="location-tag">Benejúzar</a>
+          <a href="/marketing-digital/benferri" class="location-tag">Benferri</a>
+          <a href="/marketing-digital/bigastro" class="location-tag">Bigastro</a>
+          <a href="/marketing-digital/callosa-de-segura" class="location-tag">Callosa de Segura</a>
+          <a href="/marketing-digital/correntias-medias" class="location-tag">Correntías Medias</a>
+          <a href="/marketing-digital/cox" class="location-tag">Cox</a>
+          <a href="/marketing-digital/el-baden" class="location-tag">El Badén</a>
+          <a href="/marketing-digital/elche" class="location-tag">Elche</a>
+          <a href="/marketing-digital/guardamar-del-segura" class="location-tag">Guardamar del Segura</a>
+          <a href="/marketing-digital/hurchillo" class="location-tag">Hurchillo</a>
+          <a href="/marketing-digital/jacarilla" class="location-tag">Jacarilla</a>
+          <a href="/marketing-digital/molins" class="location-tag">Molins</a>
+          <a href="/marketing-digital/murcia" class="location-tag">Murcia</a>
+          <a href="/marketing-digital/rafal" class="location-tag">Rafal</a>
+          <a href="/marketing-digital/redovan" class="location-tag">Redován</a>
+          <a href="/marketing-digital/san-bartolome" class="location-tag">San Bartolomé</a>
+          <a href="/marketing-digital/torremendo" class="location-tag">Torremendo</a>
+          <a href="/marketing-digital/torrevieja" class="location-tag">Torrevieja</a>
+          <a href="/marketing-digital/vega-baja" class="location-tag">Vega Baja</a>
+          <a href="/marketing-digital/vistabella" class="location-tag">Vistabella</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 No Más Rollo. Todos los derechos reservados.</p>
+        <p><a href="/blog" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Blog</a> | <a href="/#contacto" style="color: inherit; text-decoration: none;">Contacto</a></p>
+        <p class="footer-since">DESDE 2017</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

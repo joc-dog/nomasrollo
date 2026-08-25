@@ -13,7 +13,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
     "compression": "^1.8.1",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jimp": "^1.6.1"
   }
