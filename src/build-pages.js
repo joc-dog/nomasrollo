@@ -1,5 +1,7 @@
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+const { createClient } = require('@supabase/supabase-js');
 
 const citiesFilePath = path.join(__dirname, 'cities.json');
 const blogFilePath = path.join(__dirname, 'blog.json');
@@ -10,6 +12,15 @@ const blogListTemplatePath = path.join(__dirname, '..', 'public', 'blog-list.htm
 const outputBaseDir = path.join(__dirname, '..', 'public', 'marketing-digital');
 const blogOutputDir = path.join(__dirname, '..', 'public', 'blog');
 const sitemapFilePath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+
+// Load environment variables for Supabase
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+let supabase = null;
+
+if (supabaseUrl && supabaseAnonKey) {
+  supabase = createClient(supabaseUrl, supabaseAnonKey);
+}
 
 function generateBlogCardHtml(post) {
   return `
@@ -31,16 +42,49 @@ function generateBlogCardHtml(post) {
 
 async function main() {
   try {
-    console.log('Iniciando proceso de generación estática (SSG) de Blog Local y SEO Local...');
+    console.log('Iniciando proceso de generación estática (SSG) de Blog y SEO Local...');
 
     // ==========================================================================
-    // 1. OBTENER ARTÍCULOS DESDE BLOG.JSON LOCAL
+    // 1. OBTENER ARTÍCULOS DESDE BLOG.JSON LOCAL O SUPABASE
     // ==========================================================================
-    if (!fs.existsSync(blogFilePath)) {
-      throw new Error(`No se encuentra el archivo de artículos del blog: ${blogFilePath}`);
+    let articles = [];
+    
+    // Primero, cargamos los datos por defecto desde blog.json local
+    if (fs.existsSync(blogFilePath)) {
+      try {
+        articles = JSON.parse(fs.readFileSync(blogFilePath, 'utf8'));
+        console.log(`Cargados ${articles.length} artículos base desde el archivo local blog.json.`);
+      } catch (jsonErr) {
+        console.warn('Error al parsear el blog.json local:', jsonErr.message);
+      }
     }
-    const articles = JSON.parse(fs.readFileSync(blogFilePath, 'utf8'));
-    console.log(`Cargados ${articles.length} artículos desde el archivo local blog.json.`);
+
+    // Si las claves de Supabase están definidas, intentamos sincronizar con la base de datos
+    if (supabase) {
+      try {
+        console.log('Conectando a tu nueva base de datos de Supabase para obtener artículos...');
+        const { data: dbArticles, error } = await supabase
+          .from('articulos')
+          .select('*')
+          .eq('published', true)
+          .order('id', { ascending: true });
+
+        if (error) {
+          throw error;
+        }
+
+        if (dbArticles && dbArticles.length > 0) {
+          articles = dbArticles;
+          console.log(`¡Conectado con éxito! Sincronizados ${articles.length} artículos en vivo desde Supabase.`);
+        } else {
+          console.log('La tabla de Supabase está vacía. Utilizando artículos locales de blog.json.');
+        }
+      } catch (dbError) {
+        console.warn('No se pudo conectar a Supabase o la tabla no está lista aún. Usando artículos locales:', dbError.message);
+      }
+    } else {
+      console.log('No se configuraron credenciales de Supabase en .env. Compilando únicamente con blog.json local.');
+    }
 
     // ==========================================================================
     // 2. INYECTAR TARJETAS EN INDEX.HTML TEMPLATE (VISTA PREVIA)
@@ -229,7 +273,7 @@ async function main() {
     fs.writeFileSync(sitemapFilePath, sitemapContent);
     console.log(`Sitemap generado con éxito en: ${sitemapFilePath}`);
 
-    console.log('¡Generación estática (SSG) de Blog Local, SEO Local y Sitemap completada con éxito!');
+    console.log('¡Generación estática (SSG) de Blog, SEO Local y Sitemap completada con éxito!');
   } catch (error) {
     console.error('Error durante la generación de páginas:', error);
     process.exit(1);
