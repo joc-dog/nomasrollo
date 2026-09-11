@@ -169,4 +169,74 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ==========================================
+  // 6. Plans Modal Popup Handler
+  // ==========================================
+  const btnVerPlanes = document.getElementById('btn-ver-planes');
+  const modalBackdrop = document.getElementById('modal-planes-backdrop');
+  const modalCloseBtn = document.getElementById('modal-plans-close');
+  const selectPlanTriggers = document.querySelectorAll('.select-plan-trigger');
+  const formServiceSelect = document.getElementById('form-service');
+  const formMessageInput = document.getElementById('form-message');
+
+  const openModal = () => {
+    if (modalBackdrop) {
+      modalBackdrop.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
+  };
+
+  const closeModal = () => {
+    if (modalBackdrop) {
+      modalBackdrop.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+  };
+
+  if (btnVerPlanes) {
+    btnVerPlanes.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeModal);
+  }
+
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop && modalBackdrop.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  selectPlanTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      const planName = trigger.getAttribute('data-plan');
+      closeModal();
+      
+      if (formServiceSelect) {
+        // Find matching option for Redes Sociales or select it
+        for (let i = 0; i < formServiceSelect.options.length; i++) {
+          if (formServiceSelect.options[i].value.includes('redes') || formServiceSelect.options[i].text.includes('Redes')) {
+            formServiceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (formMessageInput && planName) {
+        formMessageInput.value = `Hola, estoy interesado en contratar el ${planName}. Por favor contactad conmigo.`;
+      }
+    });
+  });
 });

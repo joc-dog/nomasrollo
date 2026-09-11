@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="No Más Rollo - Agencia de Marketing Digital. Estrategia digital, publicidad online (PPC), diseño web, SEO, redes sociales y analítica sin rodeos. Resultados desde 2017.">
+  <meta name="description" content="No Más Rollo - Agencia de Marketing Digital. Estrategia digital, publicidad online (PPC), diseño web, SEO, redes sociales y analítica sin rodeos. Resultados reales.">
   <title>No Más Rollo | Agencia de Marketing Digital</title>
   
   <!-- SEO Meta Tags -->
@@ -14,14 +14,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nomasrollo.es/">
   <meta property="og:title" content="No Más Rollo | Agencia de Marketing Digital">
-  <meta property="og:description" content="Estrategia digital, publicidad online (PPC), desarrollo web, posicionamiento SEO, redes sociales y analítica sin tecnicismos ni rodeos. Resultados reales desde 2017.">
+  <meta property="og:description" content="Estrategia digital, publicidad online (PPC), desarrollo web, posicionamiento SEO, redes sociales y analítica sin tecnicismos ni rodeos. Resultados reales.">
   <meta property="og:image" content="https://nomasrollo.es/assets/logo.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://nomasrollo.es/">
   <meta name="twitter:title" content="No Más Rollo | Agencia de Marketing Digital">
-  <meta name="twitter:description" content="Estrategia digital, publicidad online (PPC), desarrollo web, posicionamiento SEO, redes sociales y analítica sin tecnicismos ni rodeos. Resultados reales desde 2017.">
+  <meta name="twitter:description" content="Estrategia digital, publicidad online (PPC), desarrollo web, posicionamiento SEO, redes sociales y analítica sin tecnicismos ni rodeos. Resultados reales.">
   <meta name="twitter:image" content="https://nomasrollo.es/assets/logo.png">
 
   <!-- Schema.org JSON-LD Structured Data -->
@@ -134,11 +134,8 @@
             <a href="#analisis" class="nav-link">Análisis y Optimización</a>
           </li>
           <li class="nav-item">
-            <a href="/blog" class="nav-link">Blog</a>
-          </li>
-          <li class="nav-item">
             <a href="tel:+34661719121" class="btn btn-primary btn-nav">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -1px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Hablemos Claro
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -1px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Hablemos
             </a>
           </li>
         </ul>
@@ -165,7 +162,7 @@
           <span class="highlight">Sin rollos</span>, sin excusas.
         </h2>
         <p class="hero-subtitle">
-          Tu negocio es lo tuyo. Lo digital, lo nuestro. Conseguimos resultados reales para tu empresa desde 2017.
+          Tu negocio es lo tuyo. Lo digital, lo nuestro. Conseguimos resultados reales para tu empresa.
         </p>
         <div class="hero-actions">
           <a href="#estrategia" class="btn btn-primary btn-lg">Ver Nuestros Servicios</a>
@@ -343,7 +340,7 @@
           <li>Copywriting persuasivo enfocado en generar interacción.</li>
           <li>Gestión activa de la comunidad y moderación de consultas.</li>
         </ul>
-        <a href="#contacto" class="btn btn-outline">Humanizar Mi Marca</a>
+        <button type="button" class="btn btn-outline" id="btn-ver-planes">VER PLANES</button>
       </div>
     </div>
   </section>
@@ -568,10 +565,222 @@
 
       <div class="footer-meta">
         <p class="copyright">&copy; 2026 No Más Rollo. Todos los derechos reservados.</p>
-        <p class="since-tag">Desde 2017</p>
       </div>
     </div>
   </footer>
+
+  <!-- Modal Ventana Emergente: Planes de Redes Sociales -->
+  <div class="modal-backdrop" id="modal-planes-backdrop">
+    <div class="modal-plans-window" role="dialog" aria-modal="true" aria-labelledby="modal-plans-title">
+      <div class="modal-header">
+        <button type="button" class="modal-close-btn" id="modal-plans-close" aria-label="Cerrar ventana">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="plans-grid">
+          
+          <!-- Columna 1: Resumen General de Planes -->
+          <div class="plan-column-card">
+            <div>
+              <div class="plan-overview-header">
+                <h4>TODOS LOS <span>PLANES</span></h4>
+                <p class="plan-overview-subtitle">Una estrategia completa para que tu negocio crezca en redes sociales y Google.</p>
+              </div>
+
+              <div class="plan-benefits-title">Incluido en todos los planes:</div>
+              <ul class="plan-benefits-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Análisis inicial y estrategia digital personalizada – hoja ruta NO MÁS ROLLO</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Creación o actualización de 1 red social y Ficha de Google</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Redacción de textos y copys</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Hashtags y adaptación al sector</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Programación de contenidos</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Calendario mensual de publicaciones</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Optimización básica del perfil</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="plan-bottom-summary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <p>Tu presencia online, con una base sólida y profesional.</p>
+            </div>
+
+            <div class="plan-extra-social-box">
+              <div class="social-icons-row">
+                <span class="social-icon-bg" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></span>
+                <span class="social-icon-bg" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle></svg></span>
+                <span class="social-icon-bg" title="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 1 1-2.896-2.896c.205 0 .404.022.597.062V9.336a6.34 6.34 0 0 0-.597-.028 6.341 6.341 0 1 0 6.341 6.341V8.291a8.232 8.232 0 0 0 3.77.925V6.686z"/></svg></span>
+                <span class="social-icon-bg" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></span>
+              </div>
+              <p class="extra-social-title">RED SOCIAL ADICIONAL 65€</p>
+            </div>
+          </div>
+
+          <!-- Columna 2: PACK SIN VUELTAS -->
+          <div class="plan-column-card">
+            <div>
+              <div class="plan-card-header">
+                <div class="plan-header-title"><span class="icon-emoji">⚡</span> PACK SIN VUELTAS</div>
+              </div>
+
+              <div class="plan-price-box">
+                <div class="plan-price-label">Precio:</div>
+                <div class="plan-price-amount"><span class="underline-yellow">145 €</span>/mes</div>
+              </div>
+
+              <div class="plan-benefits-title">Beneficios:</div>
+              <ul class="plan-benefits-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Publicaciones:</strong> 2 post 1 red social/semana (mensual).</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Historias:</strong> 2 stories semanales.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Contenido visual:</strong> Reels/vídeo básico utilizando fotos y vídeos proporcionados por el cliente o banco de imágenes.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Estrategia de contenidos básica e ideas/tendencias de sector.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Reputación:</strong> Guía práctica para conseguir reseñas en Google.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="plan-bottom-summary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                <p>Ideal para empezar a ganar visibilidad y atraer más clientes.</p>
+              </div>
+              <a href="#contacto" class="btn btn-primary plan-select-btn select-plan-trigger" data-plan="Pack Sin Vueltas (145€/mes)">Contratar Plan</a>
+            </div>
+          </div>
+
+          <!-- Columna 3: PACK EN MARCHA -->
+          <div class="plan-column-card popular-plan">
+            <div>
+              <div class="plan-card-header">
+                <div class="plan-header-title"><span class="icon-emoji">🚀</span> PACK EN MARCHA</div>
+              </div>
+
+              <div class="plan-price-box">
+                <div class="plan-price-label">Precio:</div>
+                <div class="plan-price-amount"><span class="underline-yellow">195 €</span>/mes</div>
+              </div>
+
+              <div class="plan-benefits-title">Beneficios:</div>
+              <ul class="plan-benefits-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Publicaciones:</strong> 4 post semanales (1 red social).</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Historias:</strong> 2 stories semanales.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Recursos visuales:</strong> Banco de imágenes propio del mes + IA Imágenes.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Comunidad y mensajes:</strong> Respuesta y gestión de mensajes de usuarios 2 días/semana + gestión de comentarios.</span>
+                </li>
+                <li class="highlight-benefit">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>🎥 <strong>DÍA DE CONTENIDO INCLUIDO:</strong> Visita inicial al negocio.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="plan-bottom-summary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <p>Más contenido, más interacción y más clientes.</p>
+              </div>
+              <a href="#contacto" class="btn btn-primary plan-select-btn select-plan-trigger" data-plan="Pack En Marcha (195€/mes)">Contratar Plan</a>
+            </div>
+          </div>
+
+          <!-- Columna 4: PACK A TOPE -->
+          <div class="plan-column-card">
+            <div>
+              <div class="plan-card-header">
+                <div class="plan-header-title"><span class="icon-emoji">🎯</span> PACK A TOPE</div>
+              </div>
+
+              <div class="plan-price-box">
+                <div class="plan-price-label">Precio:</div>
+                <div class="plan-price-amount"><span class="underline-yellow">295 €</span>/mes</div>
+              </div>
+
+              <div class="plan-benefits-title">Beneficios:</div>
+              <ul class="plan-benefits-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Publicaciones:</strong> 8 post semanales (1 red social).</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Historias:</strong> 2 stories semanales.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Producción avanzada:</strong> Reels y vídeo con contenido más elaborado + IA de vídeo profesional.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Comunidad y mensajes:</strong> Gestión de comentarios + respuesta de mensajes 4 días/semana.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Seguimiento VIP:</strong> Informe con recomendaciones + reunión estratégica mensual.</span>
+                </li>
+                <li class="highlight-benefit">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>🎥 <strong>DÍA DE CONTENIDO INCLUIDO:</strong> Visita inicial al negocio.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="plan-bottom-summary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path></svg>
+                <p>Máximo alcance, mayor visibilidad y resultados reales.</p>
+              </div>
+              <a href="#contacto" class="btn btn-primary plan-select-btn select-plan-trigger" data-plan="Pack A Tope (295€/mes)">Contratar Plan</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
