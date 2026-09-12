@@ -826,7 +826,8 @@ body {
   text-transform: uppercase;
 }
 
-.locations-grid {
+.locations-grid,
+.locations-cloud {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -835,6 +836,8 @@ body {
 }
 
 .location-tag {
+  display: inline-block;
+  white-space: nowrap;
   color: var(--text-muted);
   font-family: var(--font-body);
   font-size: 0.8rem;
