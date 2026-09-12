@@ -1799,3 +1799,79 @@ body.modal-open {
   line-height: 1.2;
 }
 
+/* --- Tech & Platforms Advisory Section --- */
+.tech-advisory-section {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.tech-advisory-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.75rem;
+}
+
+.tech-logos-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+}
+
+.tech-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 60px;
+  min-width: 140px;
+}
+
+.tech-logo-item:hover {
+  background-color: rgba(245, 197, 24, 0.08);
+  border-color: rgba(245, 197, 24, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.tech-logo-img {
+  max-height: 36px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0.95) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.tech-logo-item:hover .tech-logo-img {
+  filter: brightness(1.1) contrast(1.2);
+}
+
+@media (max-width: 600px) {
+  .tech-logos-grid {
+    gap: 1rem;
+  }
+  .tech-logo-item {
+    height: 52px;
+    min-width: 120px;
+    padding: 0.4rem 0.8rem;
+  }
+  .tech-logo-img {
+    max-height: 28px;
+    max-width: 100px;
+  }
+}
+
