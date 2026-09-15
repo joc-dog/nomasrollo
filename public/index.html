@@ -31,64 +31,125 @@
   <meta name="twitter:description" content="Estrategia digital, publicidad online (PPC), desarrollo web, posicionamiento SEO, redes sociales y analítica sin tecnicismos ni rodeos. Resultados reales.">
   <meta name="twitter:image" content="https://nomasrollo.es/assets/logo.png">
 
-  <!-- Schema.org JSON-LD Structured Data -->
+  <!-- Schema.org JSON-LD Structured Data (GEO & AI Entity Optimization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "No Más Rollo",
-    "image": "https://nomasrollo.es/assets/logo.png",
-    "@id": "https://nomasrollo.es/#organization",
-    "url": "https://nomasrollo.es/",
-    "telephone": "+34661719121",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "C. el Congreso, 1, Hurchillo",
-      "addressLocality": "Alicante",
-      "postalCode": "03313",
-      "addressCountry": "ES"
-    },
-    "areaServed": [
-      "Orihuela",
-      "Almoradí",
-      "Arneva",
-      "Benejúzar",
-      "Benferri",
-      "Bigastro",
-      "Callosa de Segura",
-      "Correntías Medias",
-      "Cox",
-      "El Badén",
-      "Elche",
-      "Guardamar del Segura",
-      "Hurchillo",
-      "Jacarilla",
-      "Molins",
-      "Murcia",
-      "Rafal",
-      "Redován",
-      "San Bartolomé",
-      "Torremendo",
-      "Torrevieja",
-      "Vega Baja",
-      "Vistabella"
-    ],
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    "description": "Agencia de Marketing Digital en España. Ofrecemos estrategia digital, publicidad online, páginas web rápidas, posicionamiento SEO y análisis sin rodeos.",
-    "sameAs": [
-      "https://share.google/HIAYU5TWUqBGOnvb2"
+    "@graph": [
+      {
+        "@type": ["MarketingAgency", "LocalBusiness"],
+        "@id": "https://nomasrollo.es/#organization",
+        "name": "No Más Rollo",
+        "alternateName": "No Más Rollo - Agencia de Marketing Digital",
+        "legalName": "No Más Rollo",
+        "url": "https://nomasrollo.es/",
+        "logo": "https://nomasrollo.es/assets/logo.png",
+        "image": "https://nomasrollo.es/assets/logo.png",
+        "description": "No Más Rollo es una agencia de marketing digital en España especializada en estrategia digital, publicidad online (PPC), desarrollo y diseño web, posicionamiento SEO, gestión de redes sociales y analítica web sin rodeos.",
+        "disambiguatedDescription": "No Más Rollo es una marca registrada y agencia corporativa de marketing digital en España.",
+        "telephone": "+34661719121",
+        "priceRange": "$$",
+        "knowsAbout": [
+          "Marketing Digital",
+          "Estrategia Digital",
+          "Publicidad Online (PPC)",
+          "Google Ads",
+          "Meta Ads (Facebook e Instagram Ads)",
+          "TikTok Ads",
+          "Posicionamiento SEO Local y Nacional",
+          "Diseño Web",
+          "Desarrollo Web",
+          "Gestión de Redes Sociales",
+          "Analítica Web",
+          "Google Analytics 4 (GA4)"
+        ],
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "España"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Alicante"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Murcia"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Vega Baja"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C. el Congreso, 1, Hurchillo",
+          "addressLocality": "Hurchillo",
+          "addressRegion": "Alicante",
+          "postalCode": "03313",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.0583,
+          "longitude": -0.9389
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://share.google/HIAYU5TWUqBGOnvb2",
+          "https://www.instagram.com/nomasrollo",
+          "https://www.linkedin.com/company/nomasrollo"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Marketing Digital",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Publicidad Online (PPC) en Google Ads y Meta Ads",
+                "description": "Campañas de publicidad digital orientadas a captación de clientes y conversión."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Diseño y Desarrollo Web Profesional",
+                "description": "Páginas web rápidas, optimizadas para conversión y SEO."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Posicionamiento SEO Local y Nacional",
+                "description": "Estrategias de SEO para posicionar en la primera página de Google."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión de Redes Sociales y Creación de Contenido",
+                "description": "Gestión estratégica de presencia en redes sociales con producción audiovisual."
+              }
+            }
+          ]
+        }
+      }
     ]
   }
   </script>
