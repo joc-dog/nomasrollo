@@ -239,4 +239,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  // ==========================================
+  // 8. FAQ Accordion Interactivity
+  // ==========================================
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isOpen = faqItem.classList.contains('active');
+      const toggleIcon = question.querySelector('.faq-toggle-icon');
+
+      // Close all open items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        const btn = item.querySelector('.faq-question');
+        const icon = item.querySelector('.faq-toggle-icon');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+        if (icon) icon.textContent = '+';
+      });
+
+      // If it wasn't open, open it
+      if (!isOpen) {
+        faqItem.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        if (toggleIcon) toggleIcon.textContent = '−';
+      }
+    });
+  });
+
 });
